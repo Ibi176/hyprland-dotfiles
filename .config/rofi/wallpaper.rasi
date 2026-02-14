@@ -1,0 +1,123 @@
+@import "colors.rasi"
+
+configuration {
+    modi:                        "drun";
+    font:                        "JetBrains Mono Nerd Font 12";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+}
+
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0px;
+    border-radius:               10px;
+    location:                    center;
+    anchor:                      center;
+    width:                       75%;
+    background-color:            @background;
+    border:                      2px;
+    border-color:                @outline;
+}
+
+mainbox {
+    enabled:                     true;
+    children:                    [ "inputbar", "listview"  ];
+    background-color:            transparent;
+}
+
+inputbar {
+    enabled:                      true;
+    text-color:                   @on-primary;
+    background-color:             @primary;
+    padding:                      5px;
+    margin:                       10px;
+    children:                     [ "entry" ];
+}
+
+entry {
+    enabled:                      true;
+    text-color:                   @on-primary;
+    background-color:             @primary;
+    placeholder:                 " Search Wallpapers";
+    width:                       30%;
+    padding:                     10px;
+    border-radius:               12px;
+    placeholder-color:           inherit;
+
+}
+
+listview {
+    enabled:                     true;
+    columns:                     5; /* Number of elements in a row */
+    lines:                       1; /* One row */
+    padding:                     26px 36px;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical; /* Vertical arrangement */
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               true;
+
+    background-color:            transparent;
+    spacing:                     20px;
+    
+    border:                      0px;
+}
+
+element {
+    enabled:                     true;
+    orientation:                 vertical; /* Vertical arrangement */
+    expand:                      false;
+    spacing:                     0px;
+    padding:                     5px 10px;
+    border-radius:               10px;
+    cursor:                      pointer;
+    background-color:            #00000000;
+}
+
+element normal.normal {
+    background-color:            #00000033;
+    text-color:                  @primary;
+}
+element normal.urgent {
+    background-color:            #00000000;
+    text-color:                  @primary;
+}
+element normal.active {
+    background-color:            #00000000;
+    text-color:                  @primary;
+}
+
+element selected.normal {
+    background-color:            #00000080;
+    text-color:                  @primary;
+}
+element alternate.normal {
+    background-color:            #00000033;
+    text-color:                  @primary;
+}
+element alternate.urgent {
+    background-color:            #00000000;
+    text-color:                  @primary;
+}
+element alternate.active {
+    background-color:            #00000000;
+    text-color:                  @primary;
+}
+
+element-icon {
+    size:                        50%;
+    cursor:                      inherit;
+    expand:                      false;
+    padding:                     0px;
+    background-color:            #00000000;
+}
+
+element-text {
+    background-color:            transparent;
+    padding-left:                10px; /* Add padding to the left of the text */
+}
