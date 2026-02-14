@@ -1,0 +1,110 @@
+@import "colors.rasi"
+configuration {
+    show-icons:                 true;
+}
+
+window {
+    border-radius:              15px;
+    border-color:               @outline;
+    width:                      50%;
+    background-color:           @background;
+}
+
+mainbox {
+	padding:					 15px;
+    enabled:                     true;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+    background-color:            @background;
+}
+
+inputbar {
+    enabled:                     true;
+    padding:                     10px 10px 100px 10px;
+    margin:                      10px;
+    background-color:            @primary;
+    border-radius:               25px;
+    orientation:                 horizontal;
+    children:                    ["dummy","entry", "dummy"];
+    background-image:            url("~/Pictures/Wallpapers/.currentwallpaper", width);
+}
+
+entry {
+    enabled:                     true;
+    expand:                      false;
+    width:                       30%;
+    padding:                     10px;
+    border-radius:               12px;
+    background-color:            @primary;
+    text-color:                  @on-primary;
+    cursor:                      @background;
+    placeholder:                 " Search Apps"; // << Search symbol
+    placeholder-color:           inherit;
+}
+
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            @background;
+    orientation:                 vertical;
+    children:                    ["listview"];
+}
+
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               true;    
+    spacing:                     10px;
+    background-color:            @surface-dim;
+    border:                      0px;
+}
+
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-color: @primary;
+    handle-width: 8px ;
+    padding:      0;
+}
+
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               12px;
+}
+
+element normal.normal {
+    background-color:            @inverse-surface;
+    text-color:                  @on-inverse-surface;
+}
+
+element selected.normal {
+    background-color:            @primary;
+    text-color:                  @on-primary;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  @on-primary;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    font:	"Inter Medium 11";
+}
+
+textbox {
+    padding:                     12px;
+    border-radius:               10px;
+    background-color:            @primary;
+    text-color:                  @on-primary;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
