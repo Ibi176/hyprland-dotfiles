@@ -1,0 +1,55 @@
+{
+
+  "logo": {
+    "type": "auto",        // Logo type: auto, builtin, small, file, etc.
+    "source": "~/.config/fastfetch/icons/cat.txt",      // Built-in logo name or file path
+    "padding": {
+        "left": 1,         // Left padding
+        "right": 4         // Right padding
+    },
+},
+
+  "modules": [
+    "break",
+    "break",
+    "title",
+
+    {
+     "type": "custom",
+     "format": "╭──────────────╮"
+    },
+    
+    {
+    "type": "os",
+    "format": "{pretty-name}",
+    "key": " "
+    },
+
+    {
+    "type": "shell",
+    "format": "{pretty-name}",
+    "key": " "
+    },
+{
+    "type": "wm",
+    "format": "{pretty-name}",
+    "key": " "
+    },
+{
+    "type": "terminal",
+    "format": "{pretty-name}",
+    "key": " "
+    },
+
+     
+     {
+     "type": "custom",
+     "format": "╰──────────────╯"
+     },
+
+     "break",
+     "break"
+
+  ],
+
+}
